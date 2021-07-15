@@ -96,7 +96,7 @@ def app():
 
   def load_data():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_dir = os.path.join(base_dir, 'Dataset\data_glass.mat')
+    data_dir = os.path.join(base_dir, 'Dataset/data_glass.mat')
     data = sio.loadmat(data_dir)
     data = data['data']
     x = data[0::,0:-1]
