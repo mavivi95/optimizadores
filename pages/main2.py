@@ -16,7 +16,8 @@ from tensorflow.keras import layers
 
 from tensorflow.keras.optimizers import Adam, RMSprop, Adadelta, Adagrad
 
-
+from PIL import Image
+import os
 
 def app():
   
@@ -140,7 +141,10 @@ def app():
   
   with neural_model_container:
     st.header('Modelo Red Neuronal')
-    st.image('imagen_2.png')
+    image_dir = os.path.join(os.path.dirname(__file__), 'imagen_2.png')
+    im = Image.open(image_dir)
+    st.image(im)
+
 
 
   with st.form(key='columns_in_form'):
