@@ -121,11 +121,11 @@ def app():
 
   ## Diseño web
 
-  header = st.beta_container()
+  header = st.container()
   st.markdown("""---""")  
-  data_container = st.beta_container()
+  data_container = st.container()
   st.markdown("""---""")  
-  neural_model_container = st.beta_container()
+  neural_model_container = st.container()
   st.markdown("""---""")  
 
   with header:
@@ -157,7 +157,7 @@ def app():
 
   with st.form(key='columns_in_form'):
     st.header('Parámetros Optimizadores')
-    c1, c2= st.beta_columns(2)
+    c1, c2= st.columns(2)
     with c1:
       st.subheader('Adagrad')
       learning_rate_adagrad = st.number_input("Tasa de aprendizaje adagrad", step=0.001,format="%.5f", min_value=0.00001)
@@ -242,7 +242,7 @@ def app():
       flag_train = True
 
   st.markdown("""---""")  
-  result_container = st.beta_container()
+  result_container = st.container()
   with result_container:
     st.header('Resultados Entrenamiento')
 
