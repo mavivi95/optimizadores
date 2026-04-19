@@ -95,11 +95,11 @@ def app():
     del X_train, X_test
     return X_train_centered, X_test_centered, y_train_onehot, y_test_onehot, y_train
   
-  header = st.beta_container()
+  header = st.container()
   st.markdown("""---""")
-  data_container = st.beta_container()
+  data_container = st.container()
   st.markdown("""---""")
-  neural_model_container = st.beta_container()
+  neural_model_container = st.container()
   st.markdown("""---""")
   
   with header:
@@ -149,7 +149,7 @@ def app():
 
   with st.form(key='columns_in_form'):
     st.header('Parámetros Optimizadores')
-    c1, c2= st.beta_columns(2)
+    c1, c2= st.columns(2)
     
     with c1:
       st.subheader('Adagrad')
@@ -160,7 +160,7 @@ def app():
       learning_rate_rmsp = st.number_input("Tasa de aprendizaje rms", step=0.001,format="%.5f", min_value=0.00001)
       b1_rmsprp = st.slider('b1_rms', 0.0, 1.0, 0.5)
     
-    c3, c4= st.beta_columns(2)
+    c3, c4= st.columns(2)
     with c3:
       st.subheader('Adam')
       learning_rate_adam = st.number_input("Tasa de aprendizaje adam", step=0.001,format="%.5f", min_value=0.00001)
@@ -237,12 +237,12 @@ def app():
       flag_train = True
 
   st.markdown("""---""")  
-  result_container = st.beta_container()
+  result_container = st.container()
   with result_container:
     st.header('Resultados Entrenamiento')
 
-  col1, col2= st.beta_columns(2)
-  col3, col4 = st.beta_columns(2)
+  col1, col2= st.columns(2)
+  col3, col4 = st.columns(2)
 
   with col1:
     if flag_train:
@@ -262,7 +262,7 @@ def app():
       st.pyplot(fig_adadelta)
   
   st.markdown("""---""")  
-  eval_container = st.beta_container()
+  eval_container = st.container()
 
   with eval_container:
     st.header('Validación de modelos')
