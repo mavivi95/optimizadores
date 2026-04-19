@@ -121,7 +121,7 @@ def app():
 
   ## Diseño web
 
-  header = st.container()
+  header = st.container(border=True)
   st.markdown("""---""")  
   data_container = st.container()
   st.markdown("""---""")  
