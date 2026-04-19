@@ -267,7 +267,7 @@ def app():
       st.pyplot(fig_adadelta)
 
   st.markdown("""---""")  
-  eval_container = st.beta_container()
+  eval_container = st.container()
 
   with eval_container:
     st.header('Validación de modelos')
