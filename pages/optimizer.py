@@ -1,6 +1,6 @@
 import streamlit as st
 def app():
-  optimizers_container = st.beta_container()
+  optimizers_container = st.container()
 
   with optimizers_container:
       st.title('Comparación optimizadores redes neuronales')
