@@ -166,7 +166,7 @@ def app():
       st.subheader('RMSprop')
       learning_rate_rmsp = st.number_input("Tasa de aprendizaje rms", step=0.001,format="%.5f", min_value=0.00001)
       b1_rmsprp = st.slider('b1_rms', 0.0, 1.0, 0.5)
-    c3, c4= st.beta_columns(2)
+    c3, c4= st.columns(2)
     with c3:
       st.subheader('Adam')
       learning_rate_adam = st.number_input("Tasa de aprendizaje adam", step=0.001,format="%.5f", min_value=0.00001)
